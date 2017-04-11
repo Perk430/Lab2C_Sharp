@@ -11,28 +11,32 @@ namespace Lab2
         static void Main(string[] args)
         {
             // Input from user
+            string name;
             int num;
-          
 
-            Console.WriteLine("Enter an integer between 1 and 100");
+            Console.WriteLine("Hello!  Please tell me your name!");
+
+            name = (Console.ReadLine());
+
+            Console.WriteLine("Hi, " + name + ".  Enter an integer between 1 and 100");
             num = int.Parse(Console.ReadLine());
 
 
             // Determining whether input is ODD or Even
             if (num % 2 == 1)
             {
-                Console.WriteLine(num + " ODD");
+                Console.WriteLine(name + ", " + num + " is ODD");
 
             }
             else if (num % 2 == 0 && (2 <= num) && (num <= 25))
 
             {
-                Console.WriteLine(num + " Even and less than 25");
+                Console.WriteLine(name + ", " + num + " is Even and less than 25");
             }
 
             else if (num % 2 == 0 && (26 <= num) && (num < 60))
             {
-                Console.WriteLine(num + " Even");
+                Console.WriteLine(name +  ", " + num + " is Even");
             }
             else if (num % 2 == 0 && (num > 60))
 
