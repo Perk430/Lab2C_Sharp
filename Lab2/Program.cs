@@ -12,20 +12,37 @@ namespace Lab2
         {
             // Input from user
             int num;
-            bool inRange;
+          
 
             Console.WriteLine("Enter an integer between 1 and 100");
             num = int.Parse(Console.ReadLine());
+
+
             // Determining whether input is ODD or Even
             if (num % 2 == 1)
             {
-                Console.WriteLine(num + "ODD");
+                Console.WriteLine(num + " ODD");
 
             }
-            else if (num % 2 == 0) 
-            inRange = (2 <= num) && (num <= 25);
+            else if (num % 2 == 0 && (2 <= num) && (num <= 25))
+
             {
-                Console.WriteLine("Even and less than 25");
+                Console.WriteLine(num + " Even and less than 25");
+            }
+
+            else if (num % 2 == 0 && (26 <= num) && (num < 60))
+            {
+                Console.WriteLine(num + " Even");
+            }
+            else if (num % 2 == 0 && (num > 60))
+
+            {
+                Console.WriteLine(num + " Even");
+            }
+            else if (num %  2 ==1 && (num >60))
+
+            {
+                Console.WriteLine(num + " Odd");
             }
             
         }
