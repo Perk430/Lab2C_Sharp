@@ -21,6 +21,13 @@ namespace Lab2
             Console.WriteLine("Hi, " + name + ".  Enter an integer between 1 and 100");
             num = int.Parse(Console.ReadLine());
 
+            // Determining if input is within the required range of 1 and 100
+
+            if ((num < 1 ) || (num > 100))
+                    {
+                Console.WriteLine("Sorry, " + name + ", please enter an integer within the desired range: 1 to 100.");
+            return;
+            }
 
             // Determining whether input is ODD or Even
             if (num % 2 == 1)
