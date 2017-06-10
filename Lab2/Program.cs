@@ -13,8 +13,9 @@ namespace Lab2
             // Input from user
             string name;
             int num;
+            string numString = "";
 
-            Console.WriteLine("Hello!  Please tell me your name!");
+            Console.WriteLine("Hello!  Please tell me your name! \n");
 
             name = (Console.ReadLine());
 
@@ -22,13 +23,13 @@ namespace Lab2
 
             // Validating input is actually an integer.
 
-            string numString = Console.ReadLine();
-            if (!int.TryParse(numString, out num)) 
+            num = int.Parse((Console.ReadLine()));
+
+            while (!int.TryParse(numString, out num))
             {
                 Console.WriteLine("Sorry, " + name + ", that is NOT an integer.  Please enter an INTEGER between 1 and 100.");
+                num = int.Parse(Console.ReadLine());
             }
-
-            num = int.Parse(Console.ReadLine());
 
             // Determining if input is within the required range of 1 and 100
 
